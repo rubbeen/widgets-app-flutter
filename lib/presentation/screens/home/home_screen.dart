@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:widgets_app/presentation/screens/home/cards/cards_screen.dart';
 import '../../../config/meun/menu_items.dart';
 
 class HomeScreen extends StatelessWidget {
+
+  static const String name = 'home_screen';
   const HomeScreen({super.key});
 
   @override
@@ -60,6 +63,7 @@ class _CustomListTitle extends StatelessWidget {
 
         // todo : navegar a otras pantallas
         context.push( menuItem.link );
+        // context.push( CardsScreen.name );
       },
     );
   }
