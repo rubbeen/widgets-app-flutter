@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:widgets_app/config/theme/app_theme.dart';
+import 'package:widgets_app/presentation/screens/home/buttons/buttons_screen.dart';
 
 import '../../../config/meun/menu_items.dart';
 
@@ -44,14 +45,21 @@ class _CustomListTitle extends StatelessWidget {
     final Colors = Theme.of(context).colorScheme;
 
     return ListTile(
-        iconColor: Colors.primary,
-        trailing: const Icon(Icons.arrow_forward_ios_rounded),
-        leading: Icon(menuItem.icon),
-        title: Text(menuItem.title),
-        subtitle: Text(menuItem.subtitle),
-        onTap: () {
-          // todo : navegar a otras pantallas
-        },
-        );
+      iconColor: Colors.primary,
+      trailing: const Icon(Icons.arrow_forward_ios_rounded),
+      leading: Icon(menuItem.icon),
+      title: Text(menuItem.title),
+      subtitle: Text(menuItem.subtitle),
+      onTap: () {
+        // Navigator.of(context).push(
+        //   MaterialPageRoute(
+        //     builder: (context) => const ButtonsScreen(),
+        //   ),
+        // );
+        Navigator.pushNamed(context, menuItem.link);
+
+        // todo : navegar a otras pantallas
+      },
+    );
   }
 }
