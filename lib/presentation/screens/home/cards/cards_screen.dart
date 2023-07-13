@@ -181,7 +181,8 @@ class _CardType4 extends StatelessWidget {
                   icon: const Icon(Icons.more_vert_rounded),
                   onPressed: () {},
                 ),
-              )),
+              )
+          ),
           Align(
             alignment: Alignment.bottomLeft,
             child: Text('$label - Imagen'),
